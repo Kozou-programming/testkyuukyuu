@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body{
+    background-color: rgb(206, 243, 231);
+}
+.wrapper{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 4%;
+        justify-content: space-between;
+    }
+h2{
+    color: rgb(0, 9, 128);
+}
+/* ボタン */
+.button{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    
+}
+/* 会員登録確認画面 */
+table.member{
+    border-collapse: collapse;
+    text-align: center;
+    }
+table.member th{
+        border: 1px solid black;
+    }
+table.member td{
+    border: 1px solid black;
+}
+table tr td:nth-of-type(1){
+    background-color: pink;
+    width: 150px;
+}
+table tr td:nth-of-type(2){
+    background-color: whitesmoke;
+    width: 400px;
+}
+
+/* 処理後ウインドウ */
+.window{
+    background-color: aliceblue;
+    border-radius: 20px;
+}
