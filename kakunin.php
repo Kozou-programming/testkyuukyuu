@@ -11,8 +11,8 @@
     <p><?php echo $_POST['pass']; ?></p>
 
     <form action="window.php" method="post">
-        <input type="text" value="<?php echo $_POST['name'];?>" name="name">
-        <input type="text" value="<?php echo $_POST['pass'];?>" name="pass">
+        <input type="hidden" value="<?php echo $_POST['name'];?>" name="name">
+        <input type="hidden" value="<?php echo $_POST['pass'];?>" name="pass">
         <input type="submit" value="登録する">
     </form>
 </body>
