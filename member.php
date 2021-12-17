@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,10 +13,10 @@
 <body>
     <!-- 入力画面 -->
     <h2>新規会員登録</h2>
-    <form class="profile" action="confirm.php" method="post" >
+    <form class="profile" action="kakunin.php" method="post" >
         <label for="name">名前:</label>
             <input type="text" name="name" placeholder="山田孝之">
-            <label for="pass">名前:</label>
+        <label for="pass">パスワード:</label>
             <input type="text" name="pass" placeholder="123">
         <p class="button">
             <input type="submit" value="確認する">
