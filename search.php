@@ -9,21 +9,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Member</title>
 </head>
-
 <body>
     <!-- 入力画面 -->
     <h2>検索情報入力</h2>
-    <form class="profile" action="kakunin.php" method="get" >
+    <form class="profile" action="person_ex.php" method="get" >
         <label for="name">名前:</label>
             <input type="text" name="name" placeholder="山田孝之">
-        <label for="pass">パスワード:</label>
-            <input type="text" name="pass" placeholder="123">
         <p class="button">
-            <input type="submit" value="確認する">
+            <input type="submit" value="照会する">
         </p>
-
     </form>
-
 </body>
-
 </html>

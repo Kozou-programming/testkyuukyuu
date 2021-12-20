@@ -34,5 +34,6 @@ $dbh = db_open();
 </head>
 <body>
 <p>登録しました</p>
+<a href="menu.php">戻る</a>
 </body>
 </html>
