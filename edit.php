@@ -21,13 +21,12 @@ if (!$result) {
     exit;
 }
 
-$name = $result['name'];
 $name = str2html($result['name']);
 $pass = str2html($result['pass']);
 
 
 $html_form = <<<EOD
-<form action="update.php" method="post">
+<form action="update.php" method="post" name="update">
 <p>
     <label for="name">名前:</label>
     <input type="text" name="name" value="$name">

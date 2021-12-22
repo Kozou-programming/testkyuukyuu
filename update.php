@@ -1,35 +1,47 @@
 <?php
 require_once 'functions.php';
 
-$name = $_GET['name'];
 
-
-function db_open():PDO
-{
-    $user = "root";
-    $password = "mariadb";
-    $opt = [
-    PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_EMULATE_PREPARES => false,
-    PDO::MYSQL_ATTR_MULTI_STATEMENTS => false
-];
-    $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $password, $opt);
-    return $dbh;
+if(empty($_POST['id'])){
+    echo "IDを指定してください";
+    exit;
 }
+if(preg_match('/\A\d{10}\z/u', $_POST['id'])){
+    echo "適切なIDではありません";
+    exit;
+}
+if(empty($_POST['name'])){
+    echo '名前は必須です';
+    exit;
+}
+
+
+
+
 //会員情報を取得
+try{
 $dbh = db_open();
-$sql = "UPDATE member SET name = '変更' WHERE id = 2";
-$statement = $dbh->prepare($sql);
-$statement->bindParam(':name',$name, PDO::PARAM_STR);
-$statement->execute();
-$result = $statement->fetch(PDO::FETCH_ASSOC);
+$id =  (int)$_POST['id'];
+$name =  $_POST['name'];
+$pass =  $_POST['pass'];
+$sql = "UPDATE member SET name = :name, pass = :pass WHERE id =:id";
+$stmt = $dbh->prepare($sql);
+$stmt->bindParam(':name',$name, PDO::PARAM_STR);
+$stmt->bindParam(':id',$id, PDO::PARAM_INT);
+$stmt->bindParam(':pass',$pass, PDO::PARAM_STR);
+
+$stmt->execute();
+// $result = $stmt->fetch(PDO::FETCH_ASSOC);
+}catch(PDOException $e){
+    echo $e;
+}
 if(!$result){
     echo "データなし";
+    echo $stmt;
     exit;
     
 }
-echo "名前:". $result['id']."<br>";
-echo "ID:" .$result['name'];
+echo "更新しました";
 
 ?>
 
