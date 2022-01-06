@@ -31,16 +31,11 @@ $stmt->bindParam(':id',$id, PDO::PARAM_INT);
 $stmt->bindParam(':pass',$pass, PDO::PARAM_STR);
 
 $stmt->execute();
-// $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
 }catch(PDOException $e){
     echo $e;
 }
-if(!$result){
-    echo "データなし";
-    echo $stmt;
-    exit;
-    
-}
+
 echo "更新しました";
 
 ?>
@@ -55,6 +50,6 @@ echo "更新しました";
     <title>Document</title>
 </head>
 <body>
-    
+    <a href="menu.php">メニューに戻る</a>
 </body>
 </html>

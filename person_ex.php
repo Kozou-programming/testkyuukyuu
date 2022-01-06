@@ -35,6 +35,6 @@ echo "ID:" .$result['name'];
     <title>Document</title>
 </head>
 <body>
-    
+
 </body>
 </html>
