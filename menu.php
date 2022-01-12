@@ -8,9 +8,9 @@
 </head>
 <body>
     <h2>会員管理</h2>
-    <a href="member.php">会員登録する</a><br>
-    <a href="search.php">会員情報検索する</a><br>
-    <a href="list.php">会員情報を更新する</a><br>
-    <a href="contact.php">お問い合わせ</a>
+    <a href= "person/member.php">会員登録する</a><br>
+    <a href="./person/search.php">会員情報検索する</a><br>
+    <a href="./person/list.php">会員情報を更新する</a><br>
+    <a href="./contact/contact.php">お問い合わせ</a>
 </body>
 </html>

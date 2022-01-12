@@ -1,5 +1,5 @@
 <?php
-require_once 'functions.php';
+require_once '../inc/functions.php';
 
 
 if(empty($_POST['id'])){

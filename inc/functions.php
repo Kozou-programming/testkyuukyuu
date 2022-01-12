@@ -1,8 +1,4 @@
 <?php
-function str2html(string $string):string{
-    return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
-}
-
 function db_open():PDO
 {
     $user = "root";
@@ -15,3 +11,9 @@ function db_open():PDO
     $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $password, $opt);
     return $dbh;
 }
+
+function str2html(string $string):string{
+    return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
+}
+
+

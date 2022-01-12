@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Member</title>
 </head>
+
 <body>
     <!-- 入力画面 -->
     <h2>検索情報入力</h2>
@@ -18,6 +19,9 @@
         <p class="button">
             <input type="submit" value="照会する">
         </p>
+
     </form>
+
 </body>
+
 </html>

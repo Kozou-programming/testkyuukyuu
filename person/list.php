@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -10,7 +11,7 @@
 
 <body>
     <?php
-    require_once 'functions.php';
+    require_once __DIR__. '/functions.php';
     try {
         $dbh = db_open();
         $sql = 'SELECT * FROM member';
@@ -21,16 +22,17 @@
                 <th>更新</th>
                 <th>id</th>
                 <th>name</th>
-                <th>$password</th>
+                <th>password</th>
             </tr>
             <?php while ($row = $statement->fetch()) : ?>
                 <tr>
                     <td><a href="edit.php?id=<?php echo (int) $row['id']; ?>">更新</a> </td>
                     <td><?php echo str2html($row['id']); ?></td>
                     <td><?php echo str2html($row['name']); ?></td>
-                    <td><?php echo str2html($row['pass']); ?></td>
+                    <td><?php echo str2html($row['password']); ?></td>
                 </tr>
             <?php endwhile; ?>
+            
         </table>
     <?php
     } catch (PDOException $e) {

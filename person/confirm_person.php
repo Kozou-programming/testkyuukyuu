@@ -8,11 +8,11 @@
 </head>
 <body>
     <p><?php echo $_POST['name']; ?></p>
-    <p><?php echo $_POST['pass']; ?></p>
+    <p><?php echo $_POST['password']; ?></p>
 
-    <form action="window.php" method="post">
-        <input type="hidden" value="<?php echo $_POST['name'];?>" name="name">
-        <input type="hidden" value="<?php echo $_POST['pass'];?>" name="pass">
+    <form action="complete_person.php" method="post" name="person">
+        <input type="text" value="<?php echo $_POST['name'];?>" name="name">
+        <input type="text" value="<?php echo $_POST['password'];?>" name="password">
         <input type="submit" value="登録する">
     </form>
 </body>
